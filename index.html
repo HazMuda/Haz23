@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+    }
+    .box {
+      background: rgba(0,0,0,0.25);
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: white;
+      color: #ff4f81;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1 id="typing"></h1>
+  <button onclick="showMessage()">Klik sini 💕</button>
+  <div id="message"></div>
+</div>
+
+<script>
+  let text = "Hi sayang ❤️";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 150);
+    }
+  }
+  typeEffect();
+
+  function showMessage() {
+    document.getElementById("message").innerHTML =
+      "Terima kasih sebab hadir dalam hidup saya 🥺💖<br><br>" +
+      "Awak adalah kebahagiaan saya.<br>" +
+      "I love you, always ❤️";
+  }
+</script>
+
+</body>
+</html>
